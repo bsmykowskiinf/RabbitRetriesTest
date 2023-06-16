@@ -14,7 +14,7 @@ static class Program
     Console.Title = "Samples.ErrorHandling.WithDelayedRetries";
     var defaultFactory = LogManager.Use<DefaultFactory>();
     defaultFactory.Level(LogLevel.Warn);
-    defaultFactory.Directory("..\\..\\..\\logs");
+    defaultFactory.Directory("..\\..\\..\\resultLogs");
 
     var endpointConfiguration = new EndpointConfiguration(CommonConfiguration.publisherEndpointName);
     endpointConfiguration.UsePersistence<LearningPersistence>();

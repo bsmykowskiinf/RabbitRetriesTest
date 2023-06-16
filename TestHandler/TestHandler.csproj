@@ -11,6 +11,6 @@
     <PackageReference Include="NServiceBus.RabbitMQ" Version="7.0.5" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="logs\" />
+    <Folder Include="resultLogs\" />
   </ItemGroup>
 </Project>

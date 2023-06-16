@@ -10,7 +10,4 @@
     <PackageReference Include="NServiceBus.Persistence.Sql" Version="6.2.1" />
     <PackageReference Include="NServiceBus.RabbitMQ" Version="7.0.5" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="logs\" />
-  </ItemGroup>
 </Project>
