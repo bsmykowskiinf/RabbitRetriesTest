@@ -1,0 +1,1039 @@
+{
+  "rabbit_version": "3.10.20",
+  "parameters": [],
+  "policies": [],
+  "queues": [
+    {
+      "name": "nsb.v2.verify-stream-flag-enabled",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-queue-type": "stream"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-00",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-delivery",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 1000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-24",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-23",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 16777216000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-15",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-14",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 32768000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-09",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-08",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 512000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-14",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-13",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 16384000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-16",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-15",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 65536000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-03",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-02",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 8000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-17",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-16",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 131072000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-01",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-00",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 2000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-04",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-03",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 16000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-05",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-04",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 32000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "testRetries_Publisher",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-queue-type": "classic"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-25",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-24",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 33554432000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-27",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-26",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 134217728000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-26",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-25",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 67108864000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-13",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-12",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 8192000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-08",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-07",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 256000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-20",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-19",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 1048576000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-21",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-20",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 2097152000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-19",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-18",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 524288000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-11",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-10",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 2048000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-06",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-05",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 64000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-07",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-06",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 128000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-02",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-01",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 4000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "testRetries_Handler",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-queue-type": "classic"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-12",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-11",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 4096000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-10",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-09",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 1024000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-22",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-21",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 4194304000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-23",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-22",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 8388608000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    },
+    {
+      "name": "nsb.v2.delay-level-18",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-dead-letter-exchange": "nsb.v2.delay-level-17",
+        "x-dead-letter-strategy": "at-least-once",
+        "x-message-ttl": 262144000,
+        "x-overflow": "reject-publish",
+        "x-queue-type": "quorum"
+      }
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "testRetries_Publisher",
+      "type": "fanout",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-17",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-03",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-06",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-10",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-23",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-20",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-22",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-19",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-04",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-11",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-08",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "testRetries_Handler",
+      "type": "fanout",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-01",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-26",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-25",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-13",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-00",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-12",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-18",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-09",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-07",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-24",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-delivery",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-21",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-05",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-02",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-27",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-16",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-15",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "nsb.v2.delay-level-14",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "nsb.v2.delay-delivery",
+      "destination": "testRetries_Handler",
+      "destination_type": "exchange",
+      "routing_key": "#.testRetries_Handler",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-delivery",
+      "destination": "testRetries_Publisher",
+      "destination_type": "exchange",
+      "routing_key": "#.testRetries_Publisher",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-00",
+      "destination": "nsb.v2.delay-delivery",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-00",
+      "destination": "nsb.v2.delay-level-00",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-01",
+      "destination": "nsb.v2.delay-level-00",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-01",
+      "destination": "nsb.v2.delay-level-01",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-02",
+      "destination": "nsb.v2.delay-level-01",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-02",
+      "destination": "nsb.v2.delay-level-02",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-03",
+      "destination": "nsb.v2.delay-level-02",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-03",
+      "destination": "nsb.v2.delay-level-03",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-04",
+      "destination": "nsb.v2.delay-level-03",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-04",
+      "destination": "nsb.v2.delay-level-04",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-05",
+      "destination": "nsb.v2.delay-level-04",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-05",
+      "destination": "nsb.v2.delay-level-05",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-06",
+      "destination": "nsb.v2.delay-level-05",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-06",
+      "destination": "nsb.v2.delay-level-06",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-07",
+      "destination": "nsb.v2.delay-level-06",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-07",
+      "destination": "nsb.v2.delay-level-07",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-08",
+      "destination": "nsb.v2.delay-level-07",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-08",
+      "destination": "nsb.v2.delay-level-08",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-09",
+      "destination": "nsb.v2.delay-level-08",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-09",
+      "destination": "nsb.v2.delay-level-09",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-10",
+      "destination": "nsb.v2.delay-level-09",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-10",
+      "destination": "nsb.v2.delay-level-10",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-11",
+      "destination": "nsb.v2.delay-level-10",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-11",
+      "destination": "nsb.v2.delay-level-11",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-12",
+      "destination": "nsb.v2.delay-level-11",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-12",
+      "destination": "nsb.v2.delay-level-12",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-13",
+      "destination": "nsb.v2.delay-level-12",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-13",
+      "destination": "nsb.v2.delay-level-13",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-14",
+      "destination": "nsb.v2.delay-level-13",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-14",
+      "destination": "nsb.v2.delay-level-14",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-15",
+      "destination": "nsb.v2.delay-level-14",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-15",
+      "destination": "nsb.v2.delay-level-15",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-16",
+      "destination": "nsb.v2.delay-level-15",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-16",
+      "destination": "nsb.v2.delay-level-16",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-17",
+      "destination": "nsb.v2.delay-level-16",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-17",
+      "destination": "nsb.v2.delay-level-17",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-18",
+      "destination": "nsb.v2.delay-level-17",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-18",
+      "destination": "nsb.v2.delay-level-18",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-19",
+      "destination": "nsb.v2.delay-level-18",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-19",
+      "destination": "nsb.v2.delay-level-19",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-20",
+      "destination": "nsb.v2.delay-level-19",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-20",
+      "destination": "nsb.v2.delay-level-20",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-21",
+      "destination": "nsb.v2.delay-level-20",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-21",
+      "destination": "nsb.v2.delay-level-21",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-22",
+      "destination": "nsb.v2.delay-level-21",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-22",
+      "destination": "nsb.v2.delay-level-22",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-23",
+      "destination": "nsb.v2.delay-level-22",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-23",
+      "destination": "nsb.v2.delay-level-23",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-24",
+      "destination": "nsb.v2.delay-level-23",
+      "destination_type": "exchange",
+      "routing_key": "*.*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-24",
+      "destination": "nsb.v2.delay-level-24",
+      "destination_type": "queue",
+      "routing_key": "*.*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-25",
+      "destination": "nsb.v2.delay-level-24",
+      "destination_type": "exchange",
+      "routing_key": "*.*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-25",
+      "destination": "nsb.v2.delay-level-25",
+      "destination_type": "queue",
+      "routing_key": "*.*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-26",
+      "destination": "nsb.v2.delay-level-25",
+      "destination_type": "exchange",
+      "routing_key": "*.0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-26",
+      "destination": "nsb.v2.delay-level-26",
+      "destination_type": "queue",
+      "routing_key": "*.1.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-27",
+      "destination": "nsb.v2.delay-level-26",
+      "destination_type": "exchange",
+      "routing_key": "0.#",
+      "arguments": {}
+    },
+    {
+      "source": "nsb.v2.delay-level-27",
+      "destination": "nsb.v2.delay-level-27",
+      "destination_type": "queue",
+      "routing_key": "1.#",
+      "arguments": {}
+    },
+    {
+      "source": "testRetries_Handler",
+      "destination": "testRetries_Handler",
+      "destination_type": "queue",
+      "routing_key": "",
+      "arguments": {}
+    },
+    {
+      "source": "testRetries_Publisher",
+      "destination": "testRetries_Publisher",
+      "destination_type": "queue",
+      "routing_key": "",
+      "arguments": {}
+    }
+  ]
+}
